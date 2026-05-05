@@ -1,0 +1,1007 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>河北万强工程材料有限公司 - 产品图册</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Noto Sans SC','Microsoft YaHei',sans-serif;background:#e0e0e5;color:#333;}
+  @media(min-width:769px){body{overflow:hidden;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;}.mobile-wrapper{display:none!important;}.nav-controls{margin-top:16px;display:flex;align-items:center;gap:18px;}}
+  @media(max-width:768px){body{overflow-y:auto;-webkit-overflow-scrolling:touch;}.book-container{display:none!important;}.nav-controls{display:none!important;}.mobile-wrapper{display:block;padding:12px;}.mobile-page{width:100%;max-width:500px;margin:0 auto 14px;border-radius:8px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.1);aspect-ratio:960/680;position:relative;}.mobile-page .page-content{width:100%;height:100%;position:absolute;top:0;left:0;overflow:hidden;}.mobile-page .page-product .product-body{flex-direction:column!important;}.mobile-page .page-product .img-side{flex:none;height:45%;}.mobile-page .page-product .info-side{flex:1;padding:14px 16px!important;min-height:0;}.mobile-page .page-product .product-title{font-size:18px!important;}.mobile-page .page-product .product-desc{font-size:12px!important;margin-bottom:8px!important;}.mobile-page .page-product .spec-table td{font-size:11px!important;padding:3px 0!important;}.mobile-page .cover-title{font-size:28px!important;letter-spacing:3px!important;}.mobile-page .cover-company{font-size:16px!important;}.mobile-page .cover-subtitle{font-size:14px!important;letter-spacing:4px!important;}.mobile-page .cover-desc{font-size:11px!important;line-height:1.8!important;}.mobile-page .section-title{font-size:28px!important;letter-spacing:4px!important;}.mobile-page .section-subtitle{font-size:14px!important;}.mobile-page .section-desc{font-size:12px!important;}.mobile-page .page-topbar{height:28px!important;padding:0 8px!important;}.mobile-page .page-topbar .company-name{font-size:8px!important;}.mobile-page .page-topbar .page-num{font-size:8px!important;}.mobile-page .page-fullimg .overlay{padding:10px 14px!important;}.mobile-page .page-fullimg .overlay h3{font-size:14px!important;}.mobile-page .page-fullimg .overlay p{font-size:10px!important;}.mobile-page .spec-grid{grid-template-columns:1fr!important;}.mobile-page .spec-page-title{font-size:20px!important;}}
+  .book-container{width:960px;height:680px;perspective:2200px;position:relative;}
+  .book{width:100%;height:100%;position:relative;transform-style:preserve-3d;}
+  .page{position:absolute;width:100%;height:100%;border-radius:4px;overflow:hidden;backface-visibility:hidden;transition:transform 0.8s cubic-bezier(.645,.045,.355,1);box-shadow:0 8px 40px rgba(0,0,0,.13);}
+  .page.flipped{transform:rotateY(-180deg);}
+  .page-content{width:100%;height:100%;position:absolute;top:0;left:0;overflow:hidden;}
+
+  /* Brushed Steel Palette */
+  :root{
+    --steel-50:#fafafb;--steel-100:#f2f2f5;--steel-200:#e4e4ea;--steel-300:#d0d0d9;
+    --steel-400:#b0b0bc;--steel-500:#8a8a9a;--steel-600:#646478;--steel-700:#44445a;
+    --steel-800:#2a2a40;--steel-900:#1a1a2e;
+    --accent:#2b7ba0;--accent-light:#4a9cc8;--accent-dark:#1d5f7e;
+    --gold:#b8963e;--text:#2a2a40;--text-light:#646478;
+    --company:"河北万强工程材料有限公司";
+  }
+
+  /* Top bar on every page */
+  .page-topbar{
+    position:absolute;top:0;left:0;right:0;height:38px;z-index:10;
+    background:linear-gradient(90deg,var(--steel-700),var(--steel-600));
+    display:flex;align-items:center;justify-content:space-between;padding:0 20px;
+  }
+  .page-topbar .company-name{font-size:12px;color:rgba(255,255,255,.9);letter-spacing:2px;font-weight:500;}
+  .page-topbar .page-num{font-size:11px;color:rgba(255,255,255,.6);}
+
+  /* Cover */
+  .page-cover{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(150deg,#d0d0d8 0%,#c0c0ca 25%,#d8d8e0 50%,#b8b8c4 75%,#d0d0d8 100%);position:relative;}
+  .page-cover::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--accent),var(--accent-light),var(--accent));}
+  .page-cover::after{content:'';position:absolute;bottom:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--accent),var(--accent-light),var(--accent));}
+  .cover-badge{font-size:13px;color:var(--accent);letter-spacing:8px;margin-bottom:18px;border:1px solid var(--accent);padding:4px 16px;border-radius:2px;}
+  .cover-company{font-size:22px;font-weight:700;color:var(--steel-800);margin-bottom:8px;letter-spacing:3px;}
+  .cover-title{font-size:46px;font-weight:900;color:var(--steel-800);letter-spacing:6px;margin-bottom:8px;}
+  .cover-subtitle{font-size:20px;color:var(--accent);letter-spacing:10px;margin-bottom:30px;}
+  .cover-line{width:60px;height:2px;background:var(--accent);margin:0 auto 20px;}
+  .cover-desc{font-size:14px;color:var(--steel-600);line-height:2.2;}
+  .cover-year{position:absolute;bottom:28px;font-size:13px;color:var(--steel-500);letter-spacing:6px;}
+
+  /* Product page: image left, info right */
+  .page-product{background:var(--steel-50);display:flex;flex-direction:column;}
+  .page-product .product-body{flex:1;display:flex;margin-top:38px;}
+  .page-product .img-side{flex:1;overflow:hidden;position:relative;background:var(--steel-200);}
+  .page-product .img-side img{width:100%;height:100%;object-fit:cover;}
+  .page-product .info-side{flex:1;padding:28px 24px;display:flex;flex-direction:column;justify-content:center;background:var(--steel-50);position:relative;}
+  .page-product .info-side::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--accent),var(--accent-light));}
+  .product-tag{font-size:10px;color:var(--accent);letter-spacing:4px;margin-bottom:8px;font-weight:500;}
+  .product-title{font-size:24px;font-weight:700;color:var(--steel-800);margin-bottom:10px;}
+  .product-desc{font-size:13px;color:var(--steel-600);line-height:1.9;margin-bottom:14px;}
+  .spec-table{width:100%;border-collapse:collapse;margin-top:auto;}
+  .spec-table td{padding:4px 0;font-size:12px;border-bottom:1px solid var(--steel-300);}
+  .spec-table td:first-child{color:var(--accent-dark);font-weight:500;width:32%;}
+  .spec-table td:last-child{color:var(--steel-600);}
+
+  /* Full image page */
+  .page-fullimg{position:relative;overflow:hidden;background:#111;}
+  .page-fullimg img{width:100%;height:100%;object-fit:cover;}
+  .page-fullimg .topbar-overlay{position:absolute;top:0;left:0;right:0;height:38px;background:linear-gradient(180deg,rgba(0,0,0,.5),transparent);z-index:5;display:flex;align-items:center;justify-content:space-between;padding:0 20px;}
+  .page-fullimg .topbar-overlay .company-name{font-size:12px;color:rgba(255,255,255,.85);letter-spacing:2px;}
+  .page-fullimg .topbar-overlay .page-num{font-size:11px;color:rgba(255,255,255,.5);}
+  .page-fullimg .overlay{position:absolute;bottom:0;left:0;right:0;padding:22px 28px;background:linear-gradient(transparent,rgba(255,255,255,.94));}
+  .page-fullimg .overlay h3{font-size:20px;color:var(--steel-800);margin-bottom:5px;}
+  .page-fullimg .overlay p{font-size:12px;color:var(--steel-600);line-height:1.6;}
+
+  /* Spec/text page */
+  .page-specs{background:var(--steel-50);padding-top:38px;position:relative;}
+  .page-specs .specs-body{padding:22px 28px;height:calc(100% - 38px);overflow-y:auto;}
+  .page-specs::after{content:'';position:absolute;top:38px;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-light),var(--accent));}
+  .spec-page-title{font-size:26px;font-weight:700;color:var(--steel-800);margin-bottom:4px;}
+  .spec-page-subtitle{font-size:12px;color:var(--accent);letter-spacing:4px;margin-bottom:18px;}
+  .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .spec-card{background:var(--steel-100);border-radius:5px;padding:14px;border-left:3px solid var(--accent);transition:box-shadow .3s;}
+  .spec-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);}
+  .spec-card h4{font-size:13px;color:var(--accent-dark);margin-bottom:5px;}
+  .spec-card p{font-size:11px;color:var(--steel-600);line-height:1.7;}
+
+  /* Company page */
+  .page-company{background:var(--steel-50);padding-top:38px;position:relative;}
+  .page-company .company-body{padding:22px 28px;height:calc(100% - 38px);display:flex;gap:20px;}
+  .page-company .company-text{flex:1;display:flex;flex-direction:column;justify-content:center;}
+  .page-company .company-img{flex:1;border-radius:5px;overflow:hidden;}
+  .page-company .company-img img{width:100%;height:100%;object-fit:cover;}
+  .company-title{font-size:24px;font-weight:700;color:var(--steel-800);margin-bottom:4px;}
+  .company-sub{font-size:12px;color:var(--accent);letter-spacing:4px;margin-bottom:16px;}
+  .company-text p{font-size:12px;color:var(--steel-600);line-height:1.9;margin-bottom:10px;text-indent:2em;}
+
+  /* Duo image page */
+  .page-duo{background:var(--steel-50);padding-top:38px;}
+  .page-duo .duo-body{padding:16px 24px;height:calc(100% - 38px);display:flex;flex-direction:column;}
+  .page-duo .duo-title{font-size:20px;font-weight:700;color:var(--steel-800);margin-bottom:10px;}
+  .page-duo .duo-row{display:flex;gap:10px;flex:1;}
+  .page-duo .duo-item{flex:1;border-radius:5px;overflow:hidden;position:relative;}
+  .page-duo .duo-item img{width:100%;height:100%;object-fit:cover;}
+  .page-duo .duo-caption{position:absolute;bottom:0;left:0;right:0;padding:8px 12px;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff;font-size:12px;}
+
+  /* Back cover */
+  .page-back{background:linear-gradient(150deg,#d0d0d8 0%,#c0c0ca 25%,#d8d8e0 50%,#b8b8c4 75%,#d0d0d8 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;}
+  .page-back::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--accent),var(--accent-light),var(--accent));}
+
+  /* Fence section green theme */
+  .page-topbar.green{background:linear-gradient(90deg,#2a6b4a,#2b8b57);}
+  .info-side.green::before{background:linear-gradient(180deg,#2b8b57,#3aad6e)!important;}
+  .product-tag.green{color:#2b8b57;}
+  .spec-table td.green-label:first-child{color:#1d6b3e!important;}
+  .page-specs.green-accent::after{background:linear-gradient(90deg,#2b8b57,#3aad6e,#2b8b57)!important;}
+  .spec-page-subtitle.green{color:#2b8b57;}
+  .spec-card.green{border-left-color:#2b8b57;}
+  .spec-card.green h4{color:#1d6b3e;}
+  .page-section-divider{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(150deg,#1a3a2a 0%,#2a5a3a 30%,#1a4a2a 60%,#2a6a3a 100%);position:relative;}
+  .page-section-divider::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#3aad6e,#2b8b57,#3aad6e);}
+  .page-section-divider::after{content:'';position:absolute;bottom:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#3aad6e,#2b8b57,#3aad6e);}
+  .section-title{font-size:44px;font-weight:900;color:#fff;letter-spacing:8px;margin-bottom:10px;}
+  .section-subtitle{font-size:18px;color:#3aad6e;letter-spacing:6px;margin-bottom:20px;}
+  .section-line{width:60px;height:2px;background:#3aad6e;margin:0 auto 20px;}
+  .section-desc{font-size:14px;color:rgba(255,255,255,.6);line-height:2;letter-spacing:2px;}
+
+  /* Slope protection orange theme */
+  .page-topbar.orange{background:linear-gradient(90deg,#8b5a1a,#c87a22);}
+  .info-side.orange::before{background:linear-gradient(180deg,#c87a22,#e89840)!important;}
+  .product-tag.orange{color:#c87a22;}
+  .spec-table td.orange-label:first-child{color:#8b5a1a!important;}
+  .page-specs.orange-accent::after{background:linear-gradient(90deg,#c87a22,#e89840,#c87a22)!important;}
+  .spec-page-subtitle.orange{color:#c87a22;}
+  .spec-card.orange{border-left-color:#c87a22;}
+  .spec-card.orange h4{color:#8b5a1a;}
+  .page-section-divider.orange-divider{background:linear-gradient(150deg,#3a2a1a 0%,#5a3a1a 30%,#4a2a0a 60%,#6a4a2a 100%);}
+  .page-section-divider.orange-divider::before{background:linear-gradient(90deg,#e89840,#c87a22,#e89840);}
+  .page-section-divider.orange-divider::after{background:linear-gradient(90deg,#e89840,#c87a22,#e89840);}
+  .section-subtitle.orange{color:#e89840;}
+  .section-line.orange{background:#e89840;}
+
+  /* Navigation */
+  .nav-controls{margin-top:16px;display:flex;align-items:center;gap:18px;}
+  .nav-btn{background:var(--steel-200);border:1px solid var(--steel-400);color:var(--accent);padding:8px 22px;border-radius:3px;cursor:pointer;font-size:14px;transition:all .3s;}
+  .nav-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .nav-btn:disabled{opacity:.3;cursor:not-allowed;}
+  .page-indicator{color:var(--steel-500);font-size:14px;}
+</style>
+</head>
+<body>
+
+<div class="book-container">
+<div class="book" id="book">
+
+<!-- ==================== Page 1: Cover ==================== -->
+<div class="page" data-page="0"><div class="page-content page-cover">
+  <div class="cover-badge">SINCE ANPING</div>
+  <div class="cover-company">河北万强工程材料有限公司</div>
+  <div class="cover-title">石笼网 · 格宾网 · 护栏网</div>
+  <div class="cover-subtitle" style="font-size:17px;">边坡防护网 · 产 品 图 册</div>
+  <div class="cover-line"></div>
+  <div class="cover-desc">
+    专业丝网防护解决方案供应商<br>
+    执行标准 YB/T 4190 | SL/T 773 | GB/T 26941 | JT/T 528<br>
+    格宾网箱 · 雷诺护垫 · 加筋格宾 · 包塑石笼 · 铅丝笼<br>
+    框架护栏 · 双边丝护栏 · 三角折弯护栏 · 勾花网护栏 · 安防护栏<br>
+    主动防护网 · 被动防护网 · 环形网 · 钛克网
+  </div>
+  <div class="cover-year">2 0 2 5</div>
+</div></div>
+
+<!-- ==================== Page 2: Company Intro ==================== -->
+<div class="page" data-page="1"><div class="page-content" style="background:var(--steel-50);overflow:hidden;">
+  <div class="page-topbar"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">02</span></div>
+  <!-- 顶部品牌区 -->
+  <div style="height:140px;background:linear-gradient(135deg,var(--steel-700),var(--steel-800));position:relative;display:flex;align-items:center;padding:0 28px;">
+    <div style="position:relative;z-index:2;">
+      <div style="font-size:28px;font-weight:900;color:#fff;letter-spacing:4px;margin-bottom:4px;">公司简介</div>
+      <div style="font-size:12px;color:var(--accent-light);letter-spacing:6px;">COMPANY PROFILE</div>
+    </div>
+    <div style="position:absolute;right:28px;top:50%;transform:translateY(-50%);width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.1);"></div>
+    <div style="position:absolute;right:38px;top:50%;transform:translateY(-50%);width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;">
+      <div style="font-size:14px;color:rgba(255,255,255,.5);letter-spacing:2px;font-weight:700;">万强</div>
+    </div>
+  </div>
+  <!-- 主体内容 -->
+  <div style="padding:18px 28px;display:flex;gap:20px;height:calc(100% - 178px);">
+    <!-- 左列：简介 -->
+    <div style="flex:1.1;display:flex;flex-direction:column;">
+      <div style="font-size:13px;color:var(--steel-600);line-height:2;margin-bottom:12px;text-indent:2em;">
+        河北万强工程材料有限公司位于全国著名的"中国丝网之乡"——安平。专业生产销售石笼网、格宾网、雷诺护垫、铅丝笼、格宾石笼等水利工程、河道治理石笼网产品，以及防护网、边坡防护网、护栏网等围栏产品。
+      </div>
+      <div style="font-size:13px;color:var(--steel-600);line-height:2;margin-bottom:12px;text-indent:2em;">
+        我厂经过多年研究创新，坚持技术创新、科学管理、诚信经营，从原材料采购、生产管理、产品检测等关键环节严格把关，确保产品质量，赢得客户信赖。
+      </div>
+      <div style="font-size:13px;color:var(--steel-600);line-height:2;text-indent:2em;">
+        产品主要用于工业、农业、建筑、水利工程、高速公路、铁路、园林防护、水产养殖、冶金机械等各个领域。我们以"精诚合作、共振辉煌"为营销理念，用过硬的质量、良好的信誉、优质的服务、合理的价格，不断拓展市场。
+      </div>
+    </div>
+    <!-- 右列：数据+资质 -->
+    <div style="flex:0.9;display:flex;flex-direction:column;gap:12px;">
+      <!-- 数据卡片 -->
+      <div style="display:flex;gap:8px;">
+        <div style="flex:1;background:linear-gradient(135deg,var(--steel-700),var(--steel-600));border-radius:6px;padding:14px 10px;text-align:center;">
+          <div style="font-size:28px;font-weight:900;color:var(--accent-light);">10+</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.7);letter-spacing:2px;">年行业经验</div>
+        </div>
+        <div style="flex:1;background:linear-gradient(135deg,var(--steel-700),var(--steel-600));border-radius:6px;padding:14px 10px;text-align:center;">
+          <div style="font-size:28px;font-weight:900;color:var(--accent-light);">500万+</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.7);letter-spacing:2px;">㎡年产能</div>
+        </div>
+      </div>
+      <!-- 资质证书 -->
+      <div style="background:var(--steel-100);border-radius:6px;padding:12px 14px;flex:1;">
+        <div style="font-size:12px;color:var(--accent-dark);font-weight:700;margin-bottom:10px;letter-spacing:2px;">资质认证</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <div style="flex:1;min-width:120px;background:#fff;border-radius:4px;padding:8px 10px;border-left:3px solid var(--accent);">
+            <div style="font-size:13px;font-weight:700;color:var(--steel-800);">ISO 9001</div>
+            <div style="font-size:10px;color:var(--steel-500);">质量管理体系</div>
+          </div>
+          <div style="flex:1;min-width:120px;background:#fff;border-radius:4px;padding:8px 10px;border-left:3px solid var(--accent);">
+            <div style="font-size:13px;font-weight:700;color:var(--steel-800);">ISO 14001</div>
+            <div style="font-size:10px;color:var(--steel-500);">环境管理体系</div>
+          </div>
+          <div style="flex:1;min-width:120px;background:#fff;border-radius:4px;padding:8px 10px;border-left:3px solid var(--accent);">
+            <div style="font-size:13px;font-weight:700;color:var(--steel-800);">YB/T 4190</div>
+            <div style="font-size:10px;color:var(--steel-500);">格宾网标准</div>
+          </div>
+          <div style="flex:1;min-width:120px;background:#fff;border-radius:4px;padding:8px 10px;border-left:3px solid var(--accent);">
+            <div style="font-size:13px;font-weight:700;color:var(--steel-800);">GB/T 26941</div>
+            <div style="font-size:10px;color:var(--steel-500);">护栏网标准</div>
+          </div>
+        </div>
+      </div>
+      <!-- 经营理念 -->
+      <div style="background:linear-gradient(135deg,var(--accent-dark),var(--accent));border-radius:6px;padding:12px 14px;text-align:center;">
+        <div style="font-size:16px;font-weight:700;color:#fff;letter-spacing:4px;">精诚合作 · 共振辉煌</div>
+        <div style="font-size:10px;color:rgba(255,255,255,.7);margin-top:4px;letter-spacing:2px;">质量优先 · 服务优先 · 全国配送</div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 3: 格宾石笼网箱 ==================== -->
+<div class="page" data-page="2"><div class="page-content page-product">
+  <div class="page-topbar"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">03</span></div>
+  <div class="product-body">
+    <div class="img-side"><img src="images/owner_02.jpg"></div>
+    <div class="info-side">
+      <div class="product-tag">PRODUCT 01</div>
+      <div class="product-title">格宾石笼网箱</div>
+      <div class="product-desc">由机编双绞合六边形金属网面构成的箱形结构，内部填充石块，广泛用于水利堤防、挡土墙、河道护脚等工程。结构稳定、透水性好、适应变形能力强，是水利工程的理想选择。</div>
+      <table class="spec-table">
+        <tr><td>网孔规格</td><td>60×80 / 80×100 / 100×120 / 120×150mm</td></tr>
+        <tr><td>网丝直径</td><td>2.0 - 3.0mm</td></tr>
+        <tr><td>边丝直径</td><td>3.0 - 4.0mm</td></tr>
+        <tr><td>网箱尺寸</td><td>1×1×1m ~ 4×2×1m（可定制）</td></tr>
+        <tr><td>执行标准</td><td>YB/T 4190 / SL/T 773</td></tr>
+      </table>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 4: 网箱工程 ==================== -->
+<div class="page" data-page="3"><div class="page-content page-fullimg">
+  <div class="topbar-overlay"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">04</span></div>
+  <img src="images/owner_06.jpg">
+  <div class="overlay">
+    <h3>格宾网箱 · 挡土墙工程</h3>
+    <p>网孔80×100mm | 丝径2.7mm | 高尔凡材质 | 堤防护脚、挡土墙加固、河道整治</p>
+  </div>
+</div></div>
+
+<!-- ==================== Page 5: 雷诺护垫 ==================== -->
+<div class="page" data-page="4"><div class="page-content page-product">
+  <div class="page-topbar"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">05</span></div>
+  <div class="product-body">
+    <div class="info-side">
+      <div class="product-tag">PRODUCT 02</div>
+      <div class="product-title">雷诺护垫</div>
+      <div class="product-desc">厚度远小于长宽的扁平网垫结构，主要用于河道护底、边坡防护。柔性结构，透水性好，适应河床变形，生态环保，是河道治理的首选产品。</div>
+      <table class="spec-table">
+        <tr><td>网孔规格</td><td>60×80 / 80×100mm</td></tr>
+        <tr><td>网丝直径</td><td>2.0 - 2.2mm</td></tr>
+        <tr><td>边丝直径</td><td>2.7 - 3.0mm</td></tr>
+        <tr><td>护垫厚度</td><td>0.17 / 0.23 / 0.30m</td></tr>
+        <tr><td>隔板间距</td><td>1m（双隔板/单隔板）</td></tr>
+      </table>
+    </div>
+    <div class="img-side"><img src="images/owner_34.jpg"></div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 6: 护垫工程 ==================== -->
+<div class="page" data-page="5"><div class="page-content page-fullimg">
+  <div class="topbar-overlay"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">06</span></div>
+  <img src="images/owner_34.jpg">
+  <div class="overlay">
+    <h3>雷诺护垫 · 河道护底工程</h3>
+    <p>河道护底、边坡防护、生态修复 | 柔性结构适应变形，透水性能优良</p>
+  </div>
+</div></div>
+
+<!-- ==================== Page 7: 包塑石笼网 ==================== -->
+<div class="page" data-page="6"><div class="page-content page-product">
+  <div class="page-topbar"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">07</span></div>
+  <div class="product-body">
+    <div class="img-side"><img src="images/owner_baosu.jpg"></div>
+    <div class="info-side">
+      <div class="product-tag">PRODUCT 03</div>
+      <div class="product-title">包塑石笼网</div>
+      <div class="product-desc">钢丝表面包覆PVC/PE塑料层，超强防腐性能。适用于强腐蚀环境、景观工程。颜色可定制，美观耐久，是海洋工程和景观防护的理想材料。</div>
+      <table class="spec-table">
+        <tr><td>塑层厚度</td><td>0.5 - 1.0mm</td></tr>
+        <tr><td>基丝材质</td><td>热镀锌 / 高尔凡</td></tr>
+        <tr><td>塑层颜色</td><td>绿色/灰色/黑色（可定制）</td></tr>
+        <tr><td>防腐寿命</td><td>50年以上</td></tr>
+        <tr><td>适用场景</td><td>强腐蚀/景观/海洋工程</td></tr>
+      </table>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 8: 加筋格宾网 ==================== -->
+<div class="page" data-page="7"><div class="page-content page-product">
+  <div class="page-topbar"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">08</span></div>
+  <div class="product-body">
+    <div class="info-side">
+      <div class="product-tag">PRODUCT 04</div>
+      <div class="product-title">加筋格宾网</div>
+      <div class="product-desc">格宾网箱增加加筋钢筋，形成加筋土挡墙结构。适用于高边坡防护、挡土墙等需要更高结构强度的工程，安全可靠。</div>
+      <table class="spec-table">
+        <tr><td>网孔规格</td><td>80×100 / 100×120mm</td></tr>
+        <tr><td>网丝直径</td><td>2.5 - 3.0mm</td></tr>
+        <tr><td>加筋钢筋</td><td>Φ8 - 12mm</td></tr>
+        <tr><td>面板高度</td><td>0.5 - 1.0m（可定制）</td></tr>
+        <tr><td>应用场景</td><td>加筋挡墙/陡坡防护</td></tr>
+      </table>
+    </div>
+    <div class="img-side"><img src="images/owner_jiajin.jpg"></div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 9: 铅丝石笼 & 赛克格宾 ==================== -->
+<div class="page" data-page="8"><div class="page-content page-product">
+  <div class="page-topbar"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">09</span></div>
+  <div class="product-body">
+    <div class="img-side"><img src="images/owner_08.jpg"></div>
+    <div class="info-side">
+      <div class="product-tag">PRODUCT 05</div>
+      <div class="product-title">铅丝石笼 / 赛克格宾</div>
+      <div class="product-desc">铅丝石笼采用优质低碳钢丝编织，用于防汛抢险、临时防护工程，快速部署。赛克格宾为圆柱形网笼结构，适用于河道护脚、防冲刷等工程。</div>
+      <table class="spec-table">
+        <tr><td>铅丝笼丝径</td><td>2.0 - 3.0mm</td></tr>
+        <tr><td>赛克格宾直径</td><td>Φ0.5 - 1.0m</td></tr>
+        <tr><td>赛克格宾长度</td><td>1 - 3m（可定制）</td></tr>
+        <tr><td>材质</td><td>热镀锌 / 高尔凡 / 包塑</td></tr>
+        <tr><td>应用场景</td><td>防汛抢险/河道护脚/防冲刷</td></tr>
+      </table>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 10: 网孔细节 ==================== -->
+<div class="page" data-page="9"><div class="page-content page-fullimg">
+  <div class="topbar-overlay"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">10</span></div>
+  <img src="images/owner_10.jpg">
+  <div class="overlay">
+    <h3>双绞合六边形网孔 · 品质细节</h3>
+    <p>机编双绞合工艺 | 网孔均匀牢固 | 钢丝镀锌层均匀致密 | 抗拉强度≥350MPa</p>
+  </div>
+</div></div>
+
+<!-- ==================== Page 11: 材质分类 ==================== -->
+<div class="page" data-page="10"><div class="page-content page-specs">
+  <div class="page-topbar"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">11</span></div>
+  <div class="specs-body">
+    <div class="spec-page-title">材质分类与规格</div>
+    <div class="spec-page-subtitle">MATERIAL & SPECIFICATION</div>
+    <div class="spec-grid">
+      <div class="spec-card"><h4>热镀锌钢丝</h4><p>镀锌量 ≥ 200g/m²<br>防腐寿命 10-15年<br>经济实用，性价比最高</p></div>
+      <div class="spec-card"><h4>高尔凡（锌铝合金）</h4><p>镀层量 ≥ 500g/m²<br>防腐寿命 30-50年<br>水利工程首选材质</p></div>
+      <div class="spec-card"><h4>PVC/PE包塑钢丝</h4><p>塑层厚度 0.5-1.0mm<br>防腐寿命 50年以上<br>强腐蚀环境首选</p></div>
+      <div class="spec-card"><h4>高尔凡+包塑双层</h4><p>双层防护体系<br>顶级防腐型<br>极端环境高端推荐</p></div>
+    </div>
+    <div style="margin-top:14px;padding:14px;background:var(--steel-100);border-radius:5px;border-left:3px solid var(--accent);">
+      <h4 style="color:var(--accent-dark);margin-bottom:6px;font-size:13px;">网孔与丝径对照</h4>
+      <table class="spec-table">
+        <tr><td>60×80mm</td><td>网丝 2.0-2.2mm / 边丝 2.7-3.0mm</td></tr>
+        <tr><td>80×100mm</td><td>网丝 2.2-2.7mm / 边丝 3.0-3.4mm</td></tr>
+        <tr><td>100×120mm</td><td>网丝 2.5-3.0mm / 边丝 3.4-3.8mm</td></tr>
+        <tr><td>120×150mm</td><td>网丝 2.7-3.4mm / 边丝 3.8-4.0mm</td></tr>
+      </table>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 12: 工程案例1 ==================== -->
+<div class="page" data-page="11"><div class="page-content page-fullimg">
+  <div class="topbar-overlay"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">12</span></div>
+  <img src="images/owner_09.jpg">
+  <div class="overlay">
+    <h3>工程案例 · 河道护坡治理</h3>
+    <p>格宾石笼网箱 + 雷诺护垫组合方案 | 防洪与生态修复双重目标</p>
+  </div>
+</div></div>
+
+<!-- ==================== Page 13: 工程案例2 ==================== -->
+<div class="page" data-page="12"><div class="page-content page-fullimg">
+  <div class="topbar-overlay"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">13</span></div>
+  <img src="images/owner_34.jpg">
+  <div class="overlay">
+    <h3>工程案例 · 现场施工安装</h3>
+    <p>格宾网箱组装填石 | 专业施工指导 | 从生产到安装一站式服务</p>
+  </div>
+</div></div>
+
+<!-- ==================== Page 14: 更多工程 ==================== -->
+<div class="page" data-page="13"><div class="page-content page-duo">
+  <div class="page-topbar"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">14</span></div>
+  <div class="duo-body">
+    <div class="duo-title">更多工程案例</div>
+    <div class="duo-row">
+      <div class="duo-item"><img src="images/owner_11.jpg"><div class="duo-caption">格宾网箱挡土墙工程</div></div>
+      <div class="duo-item"><img src="images/owner_36.jpg"><div class="duo-caption">河道边网箱护岸工程</div></div>
+    </div>
+    <div class="duo-row" style="margin-top:8px;">
+      <div class="duo-item"><img src="images/owner_37.jpg"><div class="duo-caption">格宾挡墙完工效果</div></div>
+      <div class="duo-item"><img src="images/owner_35.jpg"><div class="duo-caption">施工现场安装铺设</div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 15: 生产与质检 ==================== -->
+<div class="page" data-page="14"><div class="page-content page-specs">
+  <div class="page-topbar"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">15</span></div>
+  <div class="specs-body">
+    <div class="spec-page-title">生产与质量保证</div>
+    <div class="spec-page-subtitle">PRODUCTION & QUALITY</div>
+    <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:100px;text-align:center;padding:10px 4px;background:var(--steel-100);border-radius:5px;border-top:3px solid var(--accent);">
+        <div style="font-size:18px;color:var(--accent);font-weight:700;">01</div>
+        <div style="font-size:11px;color:var(--steel-700);">原材料检验</div>
+      </div>
+      <div style="flex:1;min-width:100px;text-align:center;padding:10px 4px;background:var(--steel-100);border-radius:5px;border-top:3px solid var(--accent-light);">
+        <div style="font-size:18px;color:var(--accent-light);font-weight:700;">02</div>
+        <div style="font-size:11px;color:var(--steel-700);">编织成型</div>
+      </div>
+      <div style="flex:1;min-width:100px;text-align:center;padding:10px 4px;background:var(--steel-100);border-radius:5px;border-top:3px solid var(--accent);">
+        <div style="font-size:18px;color:var(--accent);font-weight:700;">03</div>
+        <div style="font-size:11px;color:var(--steel-700);">裁剪加工</div>
+      </div>
+      <div style="flex:1;min-width:100px;text-align:center;padding:10px 4px;background:var(--steel-100);border-radius:5px;border-top:3px solid var(--accent-light);">
+        <div style="font-size:18px;color:var(--accent-light);font-weight:700;">04</div>
+        <div style="font-size:11px;color:var(--steel-700);">组装成品</div>
+      </div>
+      <div style="flex:1;min-width:100px;text-align:center;padding:10px 4px;background:var(--steel-100);border-radius:5px;border-top:3px solid var(--accent);">
+        <div style="font-size:18px;color:var(--accent);font-weight:700;">05</div>
+        <div style="font-size:11px;color:var(--steel-700);">质量检测</div>
+      </div>
+      <div style="flex:1;min-width:100px;text-align:center;padding:10px 4px;background:var(--steel-100);border-radius:5px;border-top:3px solid var(--accent-light);">
+        <div style="font-size:18px;color:var(--accent-light);font-weight:700;">06</div>
+        <div style="font-size:11px;color:var(--steel-700);">打包发货</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;margin-bottom:12px;">
+      <img src="images/owner_12.jpg" style="flex:1;height:150px;object-fit:cover;border-radius:5px;">
+      <img src="images/owner_31.jpg" style="flex:1;height:150px;object-fit:cover;border-radius:5px;">
+    </div>
+    <div style="padding:12px;background:var(--steel-100);border-radius:5px;border-left:3px solid var(--accent);">
+      <p style="font-size:11px;color:var(--steel-600);line-height:1.8;">
+        ▸ 每批产品附带质检报告 &nbsp;&nbsp;▸ 支持第三方检测机构复检 &nbsp;&nbsp;▸ 不合格产品无条件退换<br>
+        ▸ 从原材料采购到成品出厂全程把控 &nbsp;&nbsp;▸ 推行标准化生产，确保产品质量
+      </p>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 16: 产品系列总览 ==================== -->
+<div class="page" data-page="15"><div class="page-content page-specs">
+  <div class="page-topbar"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">16</span></div>
+  <div class="specs-body">
+    <div class="spec-page-title">产品系列总览</div>
+    <div class="spec-page-subtitle">PRODUCT SERIES</div>
+    <div class="spec-grid">
+      <div class="spec-card"><h4>格宾石笼网箱</h4><p>水利工程堤防护脚、挡土墙、河道护脚，网箱尺寸可定制</p></div>
+      <div class="spec-card"><h4>雷诺护垫</h4><p>河道护底、边坡防护，柔性透水结构，大面积覆盖工程</p></div>
+      <div class="spec-card"><h4>包塑石笼网</h4><p>PVC/PE覆塑防腐，景观/海洋工程，颜色可定制</p></div>
+      <div class="spec-card"><h4>加筋格宾网</h4><p>加筋土挡墙、高边坡防护，更高结构强度</p></div>
+      <div class="spec-card"><h4>铅丝石笼</h4><p>防汛抢险、临时防护工程，快速部署</p></div>
+      <div class="spec-card"><h4>赛克格宾 / 配件</h4><p>圆柱形网笼、隔板/绑丝/支撑钢筋，全套配件供应</p></div>
+    </div>
+    <div style="margin-top:12px;display:flex;gap:10px;">
+      <img src="images/owner_32.jpg" style="flex:1;height:130px;object-fit:cover;border-radius:5px;">
+      <img src="images/owner_33.jpg" style="flex:1;height:130px;object-fit:cover;border-radius:5px;">
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 17: 更多案例展示 ==================== -->
+<div class="page" data-page="16"><div class="page-content page-duo">
+  <div class="page-topbar"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">17</span></div>
+  <div class="duo-body">
+    <div class="duo-title">工程案例展示</div>
+    <div class="duo-row">
+      <div class="duo-item"><img src="images/owner_38.jpg"><div class="duo-caption">格宾挡墙施工中</div></div>
+      <div class="duo-item"><img src="images/owner_39.jpg"><div class="duo-caption">包塑格宾装石细节</div></div>
+    </div>
+    <div class="duo-row" style="margin-top:8px;">
+      <div class="duo-item"><img src="images/owner_13.jpg"><div class="duo-caption">网箱生产车间</div></div>
+      <div class="duo-item"><img src="images/owner_14.jpg"><div class="duo-caption">河道护岸完工</div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 18: 护栏网系列分隔页 ==================== -->
+<div class="page" data-page="17"><div class="page-content page-section-divider">
+  <div class="section-title">护栏网产品系列</div>
+  <div class="section-line"></div>
+  <div class="section-subtitle">FENCE PRODUCT SERIES</div>
+  <div class="section-desc">
+    公路 · 铁路 · 市政 · 体育 · 安防<br>
+    专业护栏网生产厂家 | 执行标准 GB/T 26941
+  </div>
+</div></div>
+
+<!-- ==================== Page 19: 框架护栏网 ==================== -->
+<div class="page" data-page="18"><div class="page-content page-product">
+  <div class="page-topbar green"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">19</span></div>
+  <div class="product-body">
+    <div class="img-side"><img src="images/3a8f9c2ab1d5c7310a49678b4ef7366.jpg"></div>
+    <div class="info-side green">
+      <div class="product-tag green">PRODUCT 06</div>
+      <div class="product-title">框架护栏网</div>
+      <div class="product-desc">焊接网片与矩形钢管边框组装而成，四周方管封闭式框架，结构坚固刚性好。安装便捷、防护性能优异，是目前应用最广泛的护栏网产品。</div>
+      <table class="spec-table">
+        <tr class="green-label"><td>网孔规格</td><td>75×150 / 50×100 / 50×200mm</td></tr>
+        <tr class="green-label"><td>丝径</td><td>3.5 / 4.0 / 4.5 / 5.0mm</td></tr>
+        <tr class="green-label"><td>边框规格</td><td>20×30 / 20×40 / 25×50mm 方管</td></tr>
+        <tr class="green-label"><td>立柱规格</td><td>48 / 60 / 80mm 圆管/方管</td></tr>
+        <tr class="green-label"><td>表面处理</td><td>热镀锌 / 浸塑 / 喷塑</td></tr>
+        <tr class="green-label"><td>执行标准</td><td>GB/T 26941</td></tr>
+      </table>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 20: 框架护栏网工程 ==================== -->
+<div class="page" data-page="19"><div class="page-content page-fullimg">
+  <div class="topbar-overlay"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">20</span></div>
+  <img src="images/2566561ed6707f50408218689fc1f18.jpg">
+  <div class="overlay">
+    <h3>框架护栏网 · 厂区围界应用</h3>
+    <p>网孔75×150mm | 丝径4.5mm | 热镀锌+浸塑 | 工厂、仓库、园区围墙首选</p>
+  </div>
+</div></div>
+
+<!-- ==================== Page 21: 双边丝护栏网 ==================== -->
+<div class="page" data-page="20"><div class="page-content page-product">
+  <div class="page-topbar green"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">21</span></div>
+  <div class="product-body">
+    <div class="info-side green">
+      <div class="product-tag green">PRODUCT 07</div>
+      <div class="product-title">双边丝护栏网</div>
+      <div class="product-desc">网片两侧各有一根纵向加强钢丝，结构简洁、经济实用，是最具性价比的护栏网类型。安装快速，与立柱卡扣固定，适合大面积围栏工程。</div>
+      <table class="spec-table">
+        <tr class="green-label"><td>网孔规格</td><td>50×100 / 50×150 / 75×150mm</td></tr>
+        <tr class="green-label"><td>丝径</td><td>3.5 / 4.0 / 4.5mm</td></tr>
+        <tr class="green-label"><td>边丝直径</td><td>4.0 / 4.5 / 5.0mm</td></tr>
+        <tr class="green-label"><td>立柱规格</td><td>48mm圆管（桃型柱/普通圆管）</td></tr>
+        <tr class="green-label"><td>连接方式</td><td>防盗螺栓 / 卡扣连接</td></tr>
+        <tr class="green-label"><td>执行标准</td><td>GB/T 26941</td></tr>
+      </table>
+    </div>
+    <div class="img-side"><img src="images/1678dc76db05734f115606714b39070.jpg"></div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 22: 双边丝护栏工程 ==================== -->
+<div class="page" data-page="21"><div class="page-content page-fullimg">
+  <div class="topbar-overlay"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">22</span></div>
+  <img src="images/4b8f82fba96bb2847340f677538eac8.jpg">
+  <div class="overlay">
+    <h3>双边丝护栏网 · 道路隔离工程</h3>
+    <p>网孔50×100mm | 丝径4.0mm | 浸塑绿色 | 公路、铁路、小区边界防护</p>
+  </div>
+</div></div>
+
+<!-- ==================== Page 23: 三角折弯护栏网 ==================== -->
+<div class="page" data-page="22"><div class="page-content page-product">
+  <div class="page-topbar green"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">23</span></div>
+  <div class="product-body">
+    <div class="img-side"><img src="images/1c0ba2b33857aa6da3a27fa40952724.jpg"></div>
+    <div class="info-side green">
+      <div class="product-tag green">PRODUCT 08</div>
+      <div class="product-title">三角折弯护栏网</div>
+      <div class="product-desc">网面带有V型折弯加强筋，显著增强抗冲击力和防攀爬性能。配合桃型立柱使用，安装简便、外形美观，是铁路和市政道路首选防护栅栏。</div>
+      <table class="spec-table">
+        <tr class="green-label"><td>网孔规格</td><td>50×100 / 75×150 / 50×200mm</td></tr>
+        <tr class="green-label"><td>丝径</td><td>4.0 / 4.5 / 5.0mm</td></tr>
+        <tr class="green-label"><td>折弯数量</td><td>2道 / 3道三角折弯</td></tr>
+        <tr class="green-label"><td>立柱规格</td><td>桃型柱 70×100mm</td></tr>
+        <tr class="green-label"><td>浸塑颜色</td><td>绿色/白色/黄色（可定制）</td></tr>
+        <tr class="green-label"><td>执行标准</td><td>GB/T 26941</td></tr>
+      </table>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 24: 三角折弯工程 ==================== -->
+<div class="page" data-page="23"><div class="page-content page-fullimg">
+  <div class="topbar-overlay"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">24</span></div>
+  <img src="images/940ff5807a8b312d1887138dd163c90.jpg">
+  <div class="overlay">
+    <h3>三角折弯护栏 · 铁路防护栅栏</h3>
+    <p>网孔75×150mm | 丝径5.0mm | 热镀锌+浸塑 | 高铁沿线封闭工程首选</p>
+  </div>
+</div></div>
+
+<!-- ==================== Page 25: 勾花网护栏 ==================== -->
+<div class="page" data-page="24"><div class="page-content page-product">
+  <div class="page-topbar green"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">25</span></div>
+  <div class="product-body">
+    <div class="info-side green">
+      <div class="product-tag green">PRODUCT 09</div>
+      <div class="product-title">勾花网护栏</div>
+      <div class="product-desc">采用菱形编织网面（链式编织），弹性好、缓冲性强，能承受球类撞击不损坏。视野通透、美观大方，是体育场馆和球场的首选围网。</div>
+      <table class="spec-table">
+        <tr class="green-label"><td>网孔规格</td><td>40×40 / 50×50 / 60×60mm</td></tr>
+        <tr class="green-label"><td>丝径</td><td>2.5 / 3.0 / 3.5 / 4.0mm</td></tr>
+        <tr class="green-label"><td>立柱规格</td><td>60 / 75 / 89mm 圆管</td></tr>
+        <tr class="green-label"><td>网片高度</td><td>2.0 / 3.0 / 4.0m（可定制）</td></tr>
+        <tr class="green-label"><td>包塑颜色</td><td>绿色/蓝色/黑色（可定制）</td></tr>
+        <tr class="green-label"><td>执行标准</td><td>GB/T 26941</td></tr>
+      </table>
+    </div>
+    <div class="img-side"><img src="images/0220c6d94d5795ada5c84e4d3fd7c2e.jpg"></div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 26: 勾花网工程 ==================== -->
+<div class="page" data-page="25"><div class="page-content page-fullimg">
+  <div class="topbar-overlay"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">26</span></div>
+  <img src="images/11f9200ecd16e32556236f185f48437.jpg">
+  <div class="overlay">
+    <h3>勾花网护栏 · 体育场围网</h3>
+    <p>网孔50×50mm | 丝径3.5mm | PVC包塑绿色 | 足球场、篮球场、学校操场首选</p>
+  </div>
+</div></div>
+
+<!-- ==================== Page 27: Y型安全防御护栏 ==================== -->
+<div class="page" data-page="26"><div class="page-content page-product">
+  <div class="page-topbar green"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">27</span></div>
+  <div class="product-body">
+    <div class="img-side"><img src="images/0aeb4312c82c55249cd546c120e5dc3.jpg"></div>
+    <div class="info-side green">
+      <div class="product-tag green">PRODUCT 10</div>
+      <div class="product-title">Y型安全防御护栏网</div>
+      <div class="product-desc">高安全级别防护产品，立柱顶部Y字分叉可安装刀片刺绳或蛇腹刺网，极强防攀爬和威慑能力。网面密实、结构牢固，适用于安全等级要求极高的场所。</div>
+      <table class="spec-table">
+        <tr class="green-label"><td>网孔规格</td><td>12.5×76.2mm（358防攀爬）/ 25×76mm</td></tr>
+        <tr class="green-label"><td>丝径</td><td>4.0 / 4.5 / 5.0mm</td></tr>
+        <tr class="green-label"><td>立柱规格</td><td>Y型柱 / 桃型柱（壁厚≥2.0mm）</td></tr>
+        <tr class="green-label"><td>刀片刺绳</td><td>BTO-22 / BTO-30 蛇腹刺网</td></tr>
+        <tr class="green-label"><td>安全等级</td><td>高安防（防攀爬/防剪切）</td></tr>
+        <tr class="green-label"><td>执行标准</td><td>GB/T 26941 / 监狱安全标准</td></tr>
+      </table>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 28: Y型安防护栏工程 ==================== -->
+<div class="page" data-page="27"><div class="page-content page-fullimg">
+  <div class="topbar-overlay"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">28</span></div>
+  <img src="images/242cbb83aeb2c73f011d838f8f08000.jpg">
+  <div class="overlay">
+    <h3>Y型安全防御护栏 · 机场围界</h3>
+    <p>358网孔 | Y型柱+蛇腹刺网 | 热镀锌+浸塑双层 | 监狱、机场、军事禁区</p>
+  </div>
+</div></div>
+
+<!-- ==================== Page 29: 护栏网表面处理与立柱 ==================== -->
+<div class="page" data-page="28"><div class="page-content page-specs green-accent">
+  <div class="page-topbar green"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">29</span></div>
+  <div class="specs-body">
+    <div class="spec-page-title">护栏网表面处理与立柱系统</div>
+    <div class="spec-page-subtitle green">SURFACE TREATMENT & POST SYSTEM</div>
+    <div class="spec-grid">
+      <div class="spec-card green"><h4>热镀锌</h4><p>先焊后镀，锌层均匀<br>防腐寿命15-20年<br>经济实用型</p></div>
+      <div class="spec-card green"><h4>浸塑（PVC/PE）</h4><p>网片整体浸塑<br>塑层0.5-1.0mm<br>色彩丰富，美观耐久</p></div>
+      <div class="spec-card green"><h4>热镀锌+浸塑</h4><p>双层防护体系<br>先镀锌后浸塑<br>寿命30年以上</p></div>
+      <div class="spec-card green"><h4>喷塑（静电喷涂）</h4><p>表面光滑美观<br>色彩均匀<br>适合室内/景观</p></div>
+    </div>
+    <div style="margin-top:14px;padding:14px;background:var(--steel-100);border-radius:5px;border-left:3px solid #2b8b57;">
+      <h4 style="color:#1d6b3e;margin-bottom:6px;font-size:13px;">立柱系统对照</h4>
+      <table class="spec-table">
+        <tr class="green-label"><td>圆管立柱</td><td>48/60/80mm — 最通用，双边丝/框架护栏</td></tr>
+        <tr class="green-label"><td>方管立柱</td><td>50×50/60×60mm — 稳固，框架护栏/车间隔离</td></tr>
+        <tr class="green-label"><td>桃型立柱</td><td>70×100mm — 美观卡扣式，三角折弯护栏</td></tr>
+        <tr class="green-label"><td>Y型立柱</td><td>带V型臂 — 安防级，机场/监狱护栏</td></tr>
+      </table>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 30: 护栏网工程案例 ==================== -->
+<div class="page" data-page="29"><div class="page-content page-duo">
+  <div class="page-topbar green"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">30</span></div>
+  <div class="duo-body">
+    <div class="duo-title">护栏网工程案例</div>
+    <div class="duo-row">
+      <div class="duo-item"><img src="images/2821692559f96021dbd5a090d57927c.jpg"><div class="duo-caption">铁路沿线防护栅栏</div></div>
+      <div class="duo-item"><img src="images/2917564df934cbb3f2ad444c51840f0.jpg"><div class="duo-caption">铁路封闭网工程</div></div>
+    </div>
+    <div class="duo-row" style="margin-top:8px;">
+      <div class="duo-item"><img src="images/7a9be5543f88798682673910c20a4e2.jpg"><div class="duo-caption">勾花网球场围网</div></div>
+      <div class="duo-item"><img src="images/2336f513cc0624590985900a62d1cac.jpg"><div class="duo-caption">体育场勾花围栏</div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 31: 护栏网更多案例 ==================== -->
+<div class="page" data-page="30"><div class="page-content page-duo">
+  <div class="page-topbar green"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">31</span></div>
+  <div class="duo-body">
+    <div class="duo-title">护栏网更多工程展示</div>
+    <div class="duo-row">
+      <div class="duo-item"><img src="images/853236e5529f39d07a70923fc5d5101.jpg"><div class="duo-caption">框架护栏厂区安装</div></div>
+      <div class="duo-item"><img src="images/ae0a2b41064af07aca65d6c2f815609.jpg"><div class="duo-caption">双边丝护栏道路隔离</div></div>
+    </div>
+    <div class="duo-row" style="margin-top:8px;">
+      <div class="duo-item"><img src="images/23641c2b7127c8d11eb05dfe7c2196a.jpg"><div class="duo-caption">护栏立柱组件</div></div>
+      <div class="duo-item"><img src="images/ca9099909bc5a6fe777ccaf3b203bce.jpg"><div class="duo-caption">护栏网成品堆放</div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 32: 护栏网产品总览 ==================== -->
+<div class="page" data-page="31"><div class="page-content page-specs green-accent">
+  <div class="page-topbar green"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">32</span></div>
+  <div class="specs-body">
+    <div class="spec-page-title">护栏网产品系列总览</div>
+    <div class="spec-page-subtitle green">FENCE PRODUCT SERIES</div>
+    <div class="spec-grid">
+      <div class="spec-card green"><h4>框架护栏网</h4><p>方管边框、结构坚固，公路铁路、厂区围界首选</p></div>
+      <div class="spec-card green"><h4>双边丝护栏网</h4><p>结构简洁、性价比高，道路隔离、小区围栏</p></div>
+      <div class="spec-card green"><h4>三角折弯护栏网</h4><p>V型折弯加强，桃型柱，铁路封闭、市政道路</p></div>
+      <div class="spec-card green"><h4>勾花网护栏</h4><p>菱形编织、弹性缓冲，体育场、球场专用围网</p></div>
+      <div class="spec-card green"><h4>Y型安全防御护栏</h4><p>高安防级别，刀片刺绳，机场、监狱、军事禁区</p></div>
+      <div class="spec-card green"><h4>定制服务</h4><p>特殊规格可定制 | 来图来样加工 | 全国配送</p></div>
+    </div>
+    <div style="margin-top:12px;display:flex;gap:10px;">
+      <img src="images/657c8fbbb35795b0c0a8f1ebf8146ae.jpg" style="flex:1;height:130px;object-fit:cover;border-radius:5px;">
+      <img src="images/8f902104c69f825e99ff1757a2cae9c.jpg" style="flex:1;height:130px;object-fit:cover;border-radius:5px;">
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 33: 边坡防护网系列分隔页 ==================== -->
+<div class="page" data-page="32"><div class="page-content page-section-divider orange-divider">
+  <div class="section-title">边坡防护网产品系列</div>
+  <div class="section-line orange"></div>
+  <div class="section-subtitle orange">SLOPE PROTECTION NET</div>
+  <div class="section-desc">
+    公路 · 铁路 · 矿山 · 水电 · 市政<br>
+    专业边坡防护网生产厂家 | 执行标准 JT/T 528 | GB/T 33186
+  </div>
+</div></div>
+
+<!-- ==================== Page 34: 主动防护网 ==================== -->
+<div class="page" data-page="33"><div class="page-content page-product">
+  <div class="page-topbar orange"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">34</span></div>
+  <div class="product-body">
+    <div class="img-side"><img src="images/000-vEAaTnfIvguc.jpg"></div>
+    <div class="info-side orange">
+      <div class="product-tag orange">PRODUCT 11</div>
+      <div class="product-title">主动防护网</div>
+      <div class="product-desc">SNS柔性防护系统核心产品，钢丝绳网紧贴坡面覆盖，通过锚杆和支撑绳固定，将危岩体包裹约束在原位，防止崩塌脱落。适用于风化剥落、落石隐患的边坡加固工程。</div>
+      <table class="spec-table">
+        <tr class="orange-label"><td>常见型号</td><td>GPS1 / GPS2 / GAR1 / GAR2</td></tr>
+        <tr class="orange-label"><td>钢丝绳网</td><td>DO/08/300（Φ8mm 网孔300mm）</td></tr>
+        <tr class="orange-label"><td>钢丝绳直径</td><td>Φ8 / Φ10 / Φ12mm</td></tr>
+        <tr class="orange-label"><td>网孔规格</td><td>300×300mm</td></tr>
+        <tr class="orange-label"><td>支撑绳</td><td>Φ12 / Φ16 纵横向支撑绳</td></tr>
+        <tr class="orange-label"><td>锚杆间距</td><td>3.0×3.0m / 4.5×4.5m</td></tr>
+      </table>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 35: 主动防护网工程 ==================== -->
+<div class="page" data-page="34"><div class="page-content page-fullimg">
+  <div class="topbar-overlay"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">35</span></div>
+  <img src="images/8765876875742.jpg">
+  <div class="overlay">
+    <h3>主动防护网 · 山体边坡加固</h3>
+    <p>GPS2型 | Φ8钢丝绳 | 网孔300×300mm | 公路/铁路沿线边坡防护</p>
+  </div>
+</div></div>
+
+<!-- ==================== Page 36: 被动防护网 ==================== -->
+<div class="page" data-page="35"><div class="page-content page-product">
+  <div class="page-topbar orange"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">36</span></div>
+  <div class="product-body">
+    <div class="info-side orange">
+      <div class="product-tag orange">PRODUCT 12</div>
+      <div class="product-title">被动防护网</div>
+      <div class="product-desc">由钢立柱、钢丝绳网、环形网、消能件等构成的拦石系统，设于坡脚拦截落石。具有强大的抗冲击能力，能有效吸收落石动能，是公路铁路沿线落石防护的关键设施。</div>
+      <table class="spec-table">
+        <tr class="orange-label"><td>常见型号</td><td>RX-025 / RX-050 / RX-075 / RXI-100</td></tr>
+        <tr class="orange-label"><td>防护能级</td><td>250kJ / 500kJ / 750kJ / 1000kJ+</td></tr>
+        <tr class="orange-label"><td>钢柱间距</td><td>10m（标准）</td></tr>
+        <tr class="orange-label"><td>钢柱高度</td><td>3m / 4m / 5m / 6m</td></tr>
+        <tr class="orange-label"><td>上拉锚绳</td><td>Φ16 钢丝绳</td></tr>
+        <tr class="orange-label"><td>执行标准</td><td>JT/T 528 / GB/T 33186</td></tr>
+      </table>
+    </div>
+    <div class="img-side"><img src="images/309a2dea-0d05-4d82-89b6-92dedc9c8606.jpg"></div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 37: 被动防护网工程 ==================== -->
+<div class="page" data-page="36"><div class="page-content page-fullimg">
+  <div class="topbar-overlay"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">37</span></div>
+  <img src="images/309a2dea-0d05-4d82-89b6-92dedc9c8606.jpg">
+  <div class="overlay">
+    <h3>被动防护网 · 落石拦截系统</h3>
+    <p>RX-050型 | 防护能级500kJ | 钢柱+环形网+消能件 | 公路铁路沿线</p>
+  </div>
+</div></div>
+
+<!-- ==================== Page 38: 环形网 ==================== -->
+<div class="page" data-page="37"><div class="page-content page-product">
+  <div class="page-topbar orange"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">38</span></div>
+  <div class="product-body">
+    <div class="img-side"><img src="images/微信图片_20190509110113.jpg"></div>
+    <div class="info-side orange">
+      <div class="product-tag orange">PRODUCT 13</div>
+      <div class="product-title">环形网</div>
+      <div class="product-desc">由高强度钢丝圆环相互套接而成的柔性网，耗能高、抗冲击性强。既可作主动防护网主体网层，也可作被动防护系统的拦截网面，是SNS柔性防护系统的核心组件。</div>
+      <table class="spec-table">
+        <tr class="orange-label"><td>网环规格</td><td>R5/3 / R7/3 / R9/3 / R12/3 / R16/3</td></tr>
+        <tr class="orange-label"><td>钢丝直径</td><td>Φ3mm（单环3圈/5圈/7圈）</td></tr>
+        <tr class="orange-label"><td>网环外径</td><td>250mm / 300mm / 350mm / 400mm</td></tr>
+        <tr class="orange-label"><td>抗拉强度</td><td>≥ 1770 MPa</td></tr>
+        <tr class="orange-label"><td>锌层质量</td><td>≥ 70g/m²（镀锌）</td></tr>
+        <tr class="orange-label"><td>执行标准</td><td>JT/T 528</td></tr>
+      </table>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 39: 钛克网 ==================== -->
+<div class="page" data-page="38"><div class="page-content page-product">
+  <div class="page-topbar orange"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">39</span></div>
+  <div class="product-body">
+    <div class="info-side orange">
+      <div class="product-tag orange">PRODUCT 14</div>
+      <div class="product-title">钛克网（TECCO网）</div>
+      <div class="product-desc">采用高强度钢丝绞合编织的菱形网孔格栅网，网孔细密，可防止小颗粒落石和风化碎屑。配合钢丝绳锚杆系统使用，是浅表层边坡加固的首选产品，特别适用于膨胀土、碎屑流等地质条件。</div>
+      <table class="spec-table">
+        <tr class="orange-label"><td>网孔规格</td><td>65×65mm / 80×80mm</td></tr>
+        <tr class="orange-label"><td>钢丝直径</td><td>Φ2.2 / Φ2.7 / Φ3.0mm</td></tr>
+        <tr class="orange-label"><td>钢丝强度</td><td>≥ 1770 MPa（高强度）</td></tr>
+        <tr class="orange-label"><td>网卷宽度</td><td>3.0m / 3.5m</td></tr>
+        <tr class="orange-label"><td>锌铝合金层</td><td>≥ 150g/m²</td></tr>
+        <tr class="orange-label"><td>应用场景</td><td>浅表层加固/碎屑流防护</td></tr>
+      </table>
+    </div>
+    <div class="img-side"><img src="images/534535353543.jpg"></div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 40: 边坡防护网系统组件 ==================== -->
+<div class="page" data-page="39"><div class="page-content page-specs orange-accent">
+  <div class="page-topbar orange"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">40</span></div>
+  <div class="specs-body">
+    <div class="spec-page-title">边坡防护网系统组件</div>
+    <div class="spec-page-subtitle orange">SYSTEM COMPONENTS</div>
+    <div class="spec-grid">
+      <div class="spec-card orange"><h4>钢丝绳锚杆</h4><p>Φ16/Φ20/Φ25mm<br>锚固深度1.5-5m<br>系统受力传递至基岩</p></div>
+      <div class="spec-card orange"><h4>支撑绳</h4><p>Φ12/Φ16钢丝绳<br>纵横向布置<br>连接锚杆与网面</p></div>
+      <div class="spec-card orange"><h4>缝合绳</h4><p>Φ8钢丝绳<br>网片之间连接<br>网与支撑绳固定</p></div>
+      <div class="spec-card orange"><h4>钢柱+基座</h4><p>H型钢/工字钢<br>被动网支撑骨架<br>高度3-6m可定制</p></div>
+    </div>
+    <div style="margin-top:14px;padding:14px;background:var(--steel-100);border-radius:5px;border-left:3px solid #c87a22;">
+      <h4 style="color:#8b5a1a;margin-bottom:6px;font-size:13px;">主动与被动防护网对比</h4>
+      <table class="spec-table">
+        <tr class="orange-label"><td>安装方式</td><td>主动：紧贴坡面覆盖 | 被动：坡脚悬空拦截</td></tr>
+        <tr class="orange-label"><td>功能定位</td><td>主动：加固约束危岩 | 被动：拦截落石</td></tr>
+        <tr class="orange-label"><td>适用场景</td><td>主动：风化剥落/浅层崩塌 | 被动：落石冲击/滚石</td></tr>
+        <tr class="orange-label"><td>核心网材</td><td>主动：钢丝绳网+格栅 | 被动：环形网+钢丝绳网</td></tr>
+      </table>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 41: 边坡防护网工程案例 ==================== -->
+<div class="page" data-page="40"><div class="page-content page-duo">
+  <div class="page-topbar orange"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">41</span></div>
+  <div class="duo-body">
+    <div class="duo-title">边坡防护网工程案例</div>
+    <div class="duo-row">
+      <div class="duo-item"><img src="images/QQ图片20190419095253.jpg"><div class="duo-caption">公路边坡主动防护网工程</div></div>
+      <div class="duo-item"><img src="images/25168579541.jpg"><div class="duo-caption">铁路沿线边坡加固</div></div>
+    </div>
+    <div class="duo-row" style="margin-top:8px;">
+      <div class="duo-item"><img src="images/微信图片_20190509110135.jpg"><div class="duo-caption">环形网生产加工</div></div>
+      <div class="duo-item"><img src="images/254638763583.jpg"><div class="duo-caption">山体主动网覆盖施工</div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 42: 边坡防护网更多案例 ==================== -->
+<div class="page" data-page="41"><div class="page-content page-duo">
+  <div class="page-topbar orange"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">42</span></div>
+  <div class="duo-body">
+    <div class="duo-title">边坡防护网更多工程展示</div>
+    <div class="duo-row">
+      <div class="duo-item"><img src="images/8765876875742.jpg"><div class="duo-caption">主动网施工安装中</div></div>
+      <div class="duo-item"><img src="images/545486985962312.jpg"><div class="duo-caption">主动网完工效果</div></div>
+    </div>
+    <div class="duo-row" style="margin-top:8px;">
+      <div class="duo-item"><img src="images/1463102399047155100-0.jpg"><div class="duo-caption">支撑绳索具组件</div></div>
+      <div class="duo-item"><img src="images/154848486451.jpg"><div class="duo-caption">锚杆安装施工</div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 43: 边坡防护网产品总览 ==================== -->
+<div class="page" data-page="42"><div class="page-content page-specs orange-accent">
+  <div class="page-topbar orange"><span class="company-name">河北万强工程材料有限公司</span><span class="page-num">43</span></div>
+  <div class="specs-body">
+    <div class="spec-page-title">边坡防护网产品系列总览</div>
+    <div class="spec-page-subtitle orange">SLOPE PROTECTION SERIES</div>
+    <div class="spec-grid">
+      <div class="spec-card orange"><h4>主动防护网</h4><p>GPS2/GAR2型，紧贴坡面覆盖，危岩加固约束</p></div>
+      <div class="spec-card orange"><h4>被动防护网</h4><p>RX/RXI型，坡脚拦截落石，抗冲击能级250-1000kJ</p></div>
+      <div class="spec-card orange"><h4>环形网</h4><p>高强度钢丝圆环套接，耗能高、抗冲击性强</p></div>
+      <div class="spec-card orange"><h4>钛克网（TECCO）</h4><p>高强度钢丝格栅，浅表层加固，碎屑流防护</p></div>
+      <div class="spec-card orange"><h4>系统配件</h4><p>锚杆/支撑绳/缝合绳/钢柱/消能件/基座</p></div>
+      <div class="spec-card orange"><h4>定制服务</h4><p>根据地质条件定制方案 | 来图加工 | 全国配送</p></div>
+    </div>
+    <div style="margin-top:12px;display:flex;gap:10px;">
+      <img src="images/微信图片_20190509110141.jpg" style="flex:1;height:130px;object-fit:cover;border-radius:5px;">
+      <img src="images/微信图片_20190509110150.jpg" style="flex:1;height:130px;object-fit:cover;border-radius:5px;">
+    </div>
+  </div>
+</div></div>
+
+<!-- ==================== Page 44: Back Cover ==================== -->
+<div class="page" data-page="43"><div class="page-content page-back">
+  <div style="font-size:14px;color:var(--accent);letter-spacing:6px;margin-bottom:8px;">HEBEI WANQIANG</div>
+  <div style="font-size:24px;font-weight:700;color:var(--steel-800);margin-bottom:6px;">河北万强工程材料有限公司</div>
+  <div style="font-size:18px;color:var(--accent);letter-spacing:6px;margin-bottom:22px;">精诚合作 · 共振辉煌</div>
+  <div style="width:50px;height:2px;background:var(--accent);margin:0 auto 22px;"></div>
+  <div style="font-size:13px;color:var(--steel-600);line-height:2.4;">
+    地址：河北省衡水市安平县（中国丝网之乡）<br>
+    专业生产：石笼网 · 格宾网 · 雷诺护垫 · 铅丝笼 · 护栏网 · 边坡防护网<br>
+    执行标准：YB/T 4190 | SL/T 773 | GB/T 26941 | JT/T 528<br>
+    质量优先 · 服务优先 · 全国配送
+  </div>
+  <div style="margin-top:30px;font-size:11px;color:var(--steel-500);">
+    以科技做基石 · 视质量为生命 · 以效益创佳绩 · 凭信誉求发展
+  </div>
+</div></div>
+
+</div>
+</div>
+
+<div class="mobile-wrapper" id="mobileWrapper"></div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevPage()" disabled>◀ 上一页</button>
+  <span class="page-indicator" id="pageIndicator">1 / 44</span>
+  <button class="nav-btn" id="nextBtn" onclick="nextPage()">下一页 ▶</button>
+</div>
+
+<script>
+// 手机端：动态克隆页面到纵向滑动容器
+if(window.innerWidth<=768){
+  const mw=document.getElementById('mobileWrapper');
+  document.querySelectorAll('.page .page-content').forEach((pc,i)=>{
+    const mp=document.createElement('div');
+    mp.className='mobile-page';
+    mp.innerHTML=pc.outerHTML;
+    mw.appendChild(mp);
+  });
+}
+
+// PC端：翻书逻辑
+let currentPage=0;const totalPages=44;
+const pages=document.querySelectorAll('.page');
+pages.forEach((p,i)=>p.style.zIndex=totalPages-i);
+function updatePage(){
+  document.getElementById('pageIndicator').textContent=`${currentPage+1} / ${totalPages}`;
+  document.getElementById('prevBtn').disabled=currentPage===0;
+  document.getElementById('nextBtn').disabled=currentPage===totalPages-1;
+}
+function nextPage(){if(currentPage>=totalPages-1)return;pages[currentPage].classList.add('flipped');currentPage++;updatePage();}
+function prevPage(){if(currentPage<=0)return;currentPage--;pages[currentPage].classList.remove('flipped');updatePage();}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();nextPage();}if(e.key==='ArrowLeft'){e.preventDefault();prevPage();}});
+document.querySelector('.book-container').addEventListener('click',e=>{const r=e.currentTarget.getBoundingClientRect();if(e.clientX-r.left>r.width/2)nextPage();else prevPage();});
+updatePage();
+</script>
+</body>
+</html>
