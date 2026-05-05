@@ -18,12 +18,12 @@
     .rotate-hint{display:flex!important;}
     .book-container,.nav-controls{display:none!important;}
   }
+  /* 手机端适配（竖屏+横屏） */
   @media(max-width:768px){
     .book-container{width:96vw!important;height:calc(96vw*680/960)!important;max-height:72vh!important;}
     .nav-controls{margin-top:6px;}
     .nav-btn{padding:6px 14px;font-size:12px;}
     .page-indicator{font-size:12px;}
-    /* 手机端字体缩放 */
     .cover-title{font-size:32px!important;letter-spacing:3px!important;}
     .cover-company{font-size:16px!important;}
     .cover-subtitle{font-size:14px!important;letter-spacing:4px!important;}
@@ -46,6 +46,50 @@
     .section-title{font-size:28px!important;letter-spacing:4px!important;}
     .section-subtitle{font-size:14px!important;}
     .section-desc{font-size:11px!important;}
+  }
+  /* 手机横屏专用适配 - 让画册填满屏幕高度 */
+  @media(max-height:500px) and (orientation:landscape){
+    .book-container{width:auto!important;height:94vh!important;aspect-ratio:960/680!important;max-width:96vw!important;}
+    .nav-controls{margin-top:4px;}
+    .nav-btn{padding:4px 12px;font-size:11px;}
+    .page-indicator{font-size:11px;}
+    .cover-title{font-size:24px!important;letter-spacing:2px!important;}
+    .cover-company{font-size:13px!important;}
+    .cover-subtitle{font-size:11px!important;letter-spacing:3px!important;}
+    .cover-desc{font-size:9px!important;line-height:1.6!important;}
+    .cover-badge{font-size:8px!important;letter-spacing:3px!important;}
+    .cover-line{margin:0 auto 10px!important;}
+    .cover-year{font-size:10px!important;bottom:12px!important;}
+    .page-topbar{height:22px!important;padding:0 6px!important;}
+    .page-topbar .company-name{font-size:7px!important;}
+    .page-topbar .page-num{font-size:7px!important;}
+    .product-title{font-size:15px!important;margin-bottom:4px!important;}
+    .product-desc{font-size:9px!important;line-height:1.5!important;margin-bottom:6px!important;}
+    .spec-table td{font-size:8px!important;padding:1px 0!important;}
+    .product-tag{font-size:7px!important;margin-bottom:2px!important;letter-spacing:2px!important;}
+    .info-side{padding:6px 8px!important;}
+    .info-side::before{width:2px!important;}
+    .page-fullimg .overlay{padding:4px 8px!important;}
+    .page-fullimg .overlay h3{font-size:11px!important;margin-bottom:2px!important;}
+    .page-fullimg .overlay p{font-size:7px!important;line-height:1.3!important;}
+    .spec-page-title{font-size:14px!important;}
+    .spec-page-subtitle{font-size:8px!important;}
+    .spec-grid{grid-template-columns:1fr!important;gap:4px!important;}
+    .spec-card{padding:6px 8px!important;}
+    .spec-card h4{font-size:9px!important;margin-bottom:2px!important;}
+    .spec-card p{font-size:7px!important;line-height:1.4!important;}
+    .section-title{font-size:20px!important;letter-spacing:3px!important;margin-bottom:4px!important;}
+    .section-subtitle{font-size:11px!important;letter-spacing:3px!important;margin-bottom:8px!important;}
+    .section-desc{font-size:9px!important;line-height:1.5!important;}
+    .section-line{width:30px!important;margin:0 auto 8px!important;}
+    .company-title{font-size:18px!important;}
+    .company-sub{font-size:9px!important;margin-bottom:8px!important;}
+    .company-text p{font-size:9px!important;line-height:1.5!important;margin-bottom:4px!important;}
+    .page-company .company-body{padding:8px 12px!important;gap:8px!important;}
+    .page-specs .specs-body{padding:8px 12px!important;}
+    .duo-title{font-size:14px!important;margin-bottom:4px!important;}
+    .duo-caption{font-size:8px!important;padding:4px 6px!important;}
+    .page-back .cover-company{font-size:16px!important;}
   }
   .book-container{width:960px;height:680px;perspective:2200px;position:relative;}
   .book{width:100%;height:100%;position:relative;transform-style:preserve-3d;}
